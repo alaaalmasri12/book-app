@@ -49,9 +49,7 @@ header h1
 .nav li {
     padding: 18px 0px;
     text-align: center;
-    animation:  opacityanimation 2s ease-in-out;
     transition: 3s ease;
-    animation: navbaranimate 2s ease;
 }
 .main-nav {
     position: absolute;
@@ -84,17 +82,29 @@ header h1
     background: radial-gradient(circle,#e23a23,#e23a23 );
     transition: 0.3s ease-in-out;
 }
-.change-bg
+
+.change .bar
 {
-    width:100%;
-    height: 100%;
+    height: 4px;
+}
+.change .bar1 {
+    transform: translateY(3px) rotate(-45deg);
+}
+.change .bar3
+{
+    transform: translateY(-6px) rotate(45deg);
+
+}
+.change  .bar2
+{
+    opacity: 0;
 }
 .change .bar
 {
     height: 4px;
 }
 
-#main-header
+.main-header
 {
     background-color: #4A4A4A;
     text-align: center;
@@ -181,6 +191,50 @@ footer {
 {
     list-style-type: none;
 }
+.book-box {
+    border: 5px solid #fff;
+    width: 57%;
+    margin: 21px auto;
+}
+.book-box img {
+    width: 50%;
+    padding: 3% 0px;
+    border-radius: 9px;
+}
+.book-box img {
+    width: 100%;
+    padding: 0% 0px;
+    border-radius: 2px;
+}
+.outer-box {
+    background-color: #d8d8d8;
+    border: 3px solid gray;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    text-align: center;
+    padding-bottom: 6%;
+}
+#book-author {
+    padding-top: 2%;
+    font-style: italic;
+    font-size: 15px;
+}
+#book-description {
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+    padding-top: 6%;
+    line-height: 25px;
+}
+#booke-title
+{
+    color: #fff;
+    font-weight: bold;
+}
+
 @media (min-width: 400px) and (max-width: 767px) {
   
     #book-info {
