@@ -26,7 +26,6 @@ app.post('/searches', (req, res) => {
         url = `https://www.googleapis.com/books/v1/volumes?q=${req.body.bookname}&intitle:${req.body.bookname}`;
     }
     else if (req.body.searchtype === 'author') {
-        console.log('sadads', 'authorrrrrrrrrrrr');
         url = `https://www.googleapis.com/books/v1/volumes?q=${req.body.bookname}+inauthor:${req.body.bookname}`;
     }
 
