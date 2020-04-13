@@ -1,8 +1,42 @@
-<%- include('header'); -%>
+<%- include('layout/header'); -%>
+<style>
+    .booktitle
+    {
+        padding-bottom: 5%;
+    color: #fff;
+    }
+    .bookauthor,.bookauthor
+    {
+        padding: 3%;
 
+    }
+    .outer-box
+    {
+        width: 30%;
+    }
+   
+</style>
     <main>
+        <h2 class="save"> Saved Books </h2>
+        <p class="numOfBooks"> <%= books.length%></p>
     
-    </main>
-    <%- include('footer'); -%>
+        <p style="text-align: center;padding-top: 26px; font-size: 20px;"> ** Book Details ** </p><br>
+        <% books.forEach((book)=> { %>
+            <div class="outer-box">
+            <img class="bookimage" src="<%=book.image_url%>">
+            <p class="booktitle">Title : <%=book.title%></p>
+            <p class="bookauthor">Author : <%=book.author %></p>
+            <p class="bookauthor">isbn : <%=book.isbn %></p>
+
+            <div class="button-box">
+                <a href="/books/<%=book.id%>">View Details</a>
+            </div>
+        </div>
+
+        <% }); %>
+      </main>
+    
+    
+    <%- include('layout/footer'); -%>
 </body>
 </html>
